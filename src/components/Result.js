@@ -9,12 +9,15 @@ class Result extends React.Component {
     };
 
     render() {
-        const username= sessionStorage.getItem('username');
-        const point= sessionStorage.getItem('point');
+        const username = sessionStorage.getItem('username');
+        const point = sessionStorage.getItem('point');
         return (
             <div className="result-container">
                 <div className="user">{username}</div>
+
                 <div className="score">Score: {point}</div>
+
+
                 <Button className="reset-button" onClick={() => this.resetGame()}>Reset Game</Button>
             </div>
         )

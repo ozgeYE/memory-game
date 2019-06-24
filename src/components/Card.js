@@ -42,7 +42,6 @@ class Card extends React.Component {
 
     render() {
         const card = this.props ? this.props.card : undefined;
-        // console.log(card);
         return(
             <Col xs={3} className={`flip-card ${card.isOpen===1? 'open': 'close'} ${card.isMatch===1? 'matched': ''}`}
             onClick={() => this.openCard(card)}>
@@ -54,17 +53,6 @@ class Card extends React.Component {
                 </div>
             </Col>
         )
-        // return (
-        //     <Col xs={3} className="card-container" onClick={() => this.openCard(card)}>
-        //         <div className={`card ${card.isOpen ? 'open' : ''} ${card.isMatch ? 'match' : ''}`}>
-        //             {card.isOpen ? (
-        //                 <div className="front">{card.name}</div>
-        //             ) : (
-        //                 <div>?</div>
-        //             )}
-        //         </div>
-        //     </Col>
-        // )
     }
 }
 

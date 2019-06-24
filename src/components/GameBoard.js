@@ -9,7 +9,7 @@ class GameBoard extends React.Component {
     point = 0;
     time = 0;
     // set 5 minutes default time
-    totalTime = 300;
+    totalTime = 10;
 
     componentDidMount() {
         const username= sessionStorage.getItem('username');
@@ -44,11 +44,10 @@ class GameBoard extends React.Component {
         clearInterval(this.interval);
         this.props.cards.map(c => {
             c.isMatch === 1 ? this.point += 10 : this.point += 0;
+            sessionStorage.setItem('point', JSON.stringify(this.point));
         });
 
-        this.point += (this.totalTime - this.time);
-        sessionStorage.setItem('point', JSON.stringify(this.point));
-        console.log(this.point);
+
     }
 
     render() {

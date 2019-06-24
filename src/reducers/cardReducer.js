@@ -6,7 +6,6 @@ import {
 } from "../actions/cardAction";
 
 const initialState = require("../domain/card");
-console.log(initialState);
 
 const shuffleArray=(array)=>{
     for(let i=array.length-1; i>0; i--) {
@@ -17,8 +16,7 @@ const shuffleArray=(array)=>{
     }
 
     return array;
-}
-// localStorage.setItem('links', JSON.stringify(initialState));
+};
 
 
 const cardReducer = (state = {cards: shuffleArray(initialState)}, action) => {
@@ -32,7 +30,6 @@ const cardReducer = (state = {cards: shuffleArray(initialState)}, action) => {
                 }
                 return c;
             });
-            console.log('turn', turnedCard);
             return Object.assign({}, state, {cards: turnedCard});
         case TURN_ALL_CARDS:
             const turnAllCards = state.cards.map(c => {
