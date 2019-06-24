@@ -6,6 +6,7 @@ import './Result.scss';
 class Result extends React.Component {
     resetGame = () => {
         this.props.history.push('/login');
+        sessionStorage.clear();
     };
 
     render() {
