@@ -1,0 +1,25 @@
+.result-container {
+  background-color: #94bde2;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  border-radius: 10px;
+
+  .user {
+    text-align: center;
+    padding: 6%;
+  }
+
+  .score {
+    text-align: center;
+  }
+
+  .reset-button {
+    margin-left: 41%;
+    margin-top: 10%;
+  }
+
+}

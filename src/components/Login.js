@@ -16,13 +16,8 @@ class Login extends React.Component {
         })
     };
 
-    calculatePoint = () => {
-
-    };
-
     startGame = (e) => {
         e.preventDefault();
-        console.log(this.state);
         if (!this.state.username) {
             this.setState({
                 showAlert: true
@@ -34,6 +29,7 @@ class Login extends React.Component {
                 })
             }, 2000)
         } else {
+            sessionStorage.setItem('username', this.state.username);
             this.props.history.push('/game');
         }
 
